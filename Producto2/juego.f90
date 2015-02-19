@@ -1,0 +1,12 @@
+program juego
+    write(*,*) 'Hola! Trataré de adivinar un número'
+    write(*,*) 'Piensa un número entre 1 y 10.'
+    call sleep(5)
+    write(*,*) 'Ahora multiplícalo por 9.'
+    call sleep(5)
+    write(*,*) 'Si el número tiene 2 digítos, súmalos entre si; Si tu número tiene unn solo dígito, súmale 0.'
+    call sleep(5)
+    write(*,*) 'Al número resultante súmale 4'
+    call sleep(10)
+    write(*,*) 'Muy bien. El resultado es 13.' 
+end program juego
