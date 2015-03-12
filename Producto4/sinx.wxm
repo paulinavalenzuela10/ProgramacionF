@@ -1,0 +1,38 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+f(x):= sin(x);
+
+P1(x):=taylor(f(x), x, 0, 1);
+
+P3(x):=taylor(f(x), x, 0, 3);
+
+P5(x):=taylor(f(x), x, 0, 5);
+
+P7(x):=taylor(f(x), x, 0, 7);
+
+fortran(P1(x));
+
+fortran(P3(x));
+
+fortran(P5(x));
+
+fortran(P7(x));
+
+tex(P1(x));
+
+tex(P3(x));
+
+tex(P5(x));
+
+tex(P7(x));
+
+plot2d ([f(x), P1(x), P3(x), P5(x), P7(x)], [x, -%pi, %pi], [y, -2, 2], [color, red, green, blue, orange, black],
+[axes, solid],[label,["y=P1(x)",1.4,1.27],["y=P5(x)",2.65,0.7],["y=sin(x)",2.75,0.45],["y=P7(x)",2.75, -0.4],
+["y=P3(x)",2 ,-1],["y",-0.6,2],["x", 3.1,-0.15]],  [ylabel,"Sin(x)"], [xlabel,"x"],[box,false], [legend, false]);
+/* [wxMaxima: input   end   ] */
+
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
